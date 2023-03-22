@@ -10,16 +10,21 @@ Age INT,
 Gender varchar(50)
 );
 
-CREATE TABLE EmployeeSalary
-(EmployeeID int,
-JobTitle varchar(50),
-Salary int);
+CREATE TABLE EmployeeSalary (
+    EmployeeID INT,
+    JobTitle VARCHAR(50),
+    Salary INT
+);
 
-SELECT *
-FROM EmployeeDemographics;
+SELECT 
+    *
+FROM
+    EmployeeDemographics;
 
-SELECT *
-FROM EmployeeSalary;
+SELECT 
+    *
+FROM
+    EmployeeSalary;
 
 INSERT INTO EmployeeDemographics VALUES
 (1001, 'Jim', 'Halpert', 30, 'Male'),
@@ -42,3 +47,4 @@ INSERT INTO EmployeeSalary VALUES
 (1007, 'Supplier Relations', 41000),
 (1008, 'Salesman', 48000),
 (1009, 'Accountant', 42000);
+
