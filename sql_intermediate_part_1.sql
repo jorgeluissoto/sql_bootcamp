@@ -33,3 +33,24 @@ FROM
     EmployeeDemographics ed
         INNER JOIN
     EmployeeSalary es ON ed.EmployeeID = es.EmployeeID;
+
+-- Highest paid employee besides Michael Scott
+SELECT 
+    ed.EmployeeID, FirstName, LastName, Salary
+FROM
+    EmployeeDemographics ed
+        INNER JOIN
+    EmployeeSalary es ON ed.EmployeeID = es.EmployeeID
+WHERE FirstName <> 'Michael'
+ORDER BY Salary DESC;
+
+-- Average Salary of the sales people
+SELECT 
+    JobTitle, (Salary) AS AverageSalaryOfSalesperson
+FROM
+    EmployeeDemographics ed
+        INNER JOIN
+    EmployeeSalary es ON ed.EmployeeID = es.EmployeeID
+WHERE
+    JobTitle = 'Salesman'
+GROUP BY JobTitle;
